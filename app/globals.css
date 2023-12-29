@@ -6,4 +6,18 @@
   .wrapper {
     @apply border-b-[3px] border-b-slate-600 py-8;
   }
+  .icon-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .icon {
+    color: #ffffff;
+    transition: color 0.3s ease;
+  }
+  
+  .icon:hover {
+    color: #0a66c2;
+  }
 }
