@@ -3,6 +3,8 @@ import Banner from '@/components/Banner'
 import Aboutme from '@/components/Aboutme'
 import Skills from '@/components/Skills'
 import Experience from '@/components/Experience'
+import Contact from '@/components/Contact'
+import Footer from '@/components/Footer'
 export default function Home() {
   return (
     <main className='w-full bg-gray-950 items-center text-gray-300 px-4'>
@@ -11,6 +13,8 @@ export default function Home() {
         <Aboutme/>
         <Experience/>
         <Skills/>
+        <Contact/>
+        <Footer/>
         </div>
   </main>
   )
