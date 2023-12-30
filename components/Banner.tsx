@@ -34,11 +34,11 @@ const Banner = () => {
             maching-learning y deep-learning.
           </p>
         </div>
-        <div className="icon-container">
-          <a href="https://www.linkedin.com/in/oscar-alberto-neira-vaca-75b387259/" className="icon">
+        <div className="icon-container items-center">
+          <a href="https://www.linkedin.com/in/oscar-alberto-neira-vaca-75b387259/" className="icon hover:bg-slate-800 rounded-full px-5 py-2">
             <FaLinkedin size={24} />
           </a>
-          <a href="https://github.com/mrphaox" className="icon">
+          <a href="https://github.com/mrphaox" className="icon hover:bg-slate-800 rounded-full px-5 py-2">
             <FaGithub size={24} />
           </a>
         </div>
