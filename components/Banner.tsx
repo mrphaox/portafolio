@@ -1,49 +1,60 @@
 import React from "react";
-import ImgPage from "../public/img/imgPage.jpeg";
 import Image from "next/image";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import ProfileImage from "../public/img/imgPage.jpeg"; // Reemplaza con la imagen correcta
 
 const Banner = () => {
   return (
-    <div className="wrapper flex flex-col md:flex-row items-center gap-10 ">
-      {/*image*/}
-      <div className="w-44 h-44 rounded-full items-center bg-black">
+    <div className="wrapper flex flex-col md:flex-row items-center gap-10 p-6 bg-gray-900 rounded-lg shadow-lg">
+      {/* Imagen de Perfil */}
+      <div className="w-44 h-44 rounded-full overflow-hidden border-4 border-blue-500 shadow-lg hover:shadow-blue-500 transition-shadow duration-300">
         <Image
-          className="w-full h-full rounded-full border-[1px] border-emerald-500 p-2 object-cover"
-          src={ImgPage}
-          alt="ImgPage"
+          src={ProfileImage}
+          alt="Oscar Alberto Neira Vaca"
+          className="w-full h-full object-cover"
         />
       </div>
-      {/*descripcion*/}
-      <div className="w-3/4 flex flex-col items-center md:items-start gap-2">
-        <h1 className="text-5xl font-bold text-white">
-          {" "}
+      {/* Información Personal */}
+      <div className="flex flex-col items-center md:items-start gap-4">
+        <h1 className="text-5xl font-bold text-white animate-fadeIn">
           Oscar Alberto Neira Vaca
         </h1>
-        <h3 className="text-3xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-blue-300 via-red-300 to-indigo-300 ">
-          Ingeniero De Sistemas | Full Stack Developer in Next.js
+        <h3 className="text-2xl font-medium bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">
+          Ingeniero de Sistemas | Desarrollador Web
         </h3>
-        <div className="w-full h-full rounded-full border-[2px] items-center border-emerald-200 p-2 object-cover">
-          <p className="text-base tracking-wide md:text-left text-justify p-4">
-            Soy un estudiante de ingeniería de sistemas enfocado en el
-            desarrollo web con el framework Next.js. Poseo habilidades en el
-            manejo de lenguajes de programación como PHP, Java, Python,
-            JavaScript, Node.js, Angular Js, React.js, CSS, HTML. Además, tengo
-            experiencia en el manejo de bases de datos, metodologías ágiles,
-            maching-learning y deep-learning.
-          </p>
-        </div>
-        <div className="icon-container items-center">
-          <a href="https://www.linkedin.com/in/oscar-alberto-neira-vaca-75b387259/" className="icon hover:bg-slate-800 rounded-full px-5 py-2">
-            <FaLinkedin size={24} />
+        <p className="text-gray-400 text-center md:text-left leading-relaxed">
+          Con experiencia en desarrollo de aplicaciones web utilizando <strong>Next.js</strong> y <strong>React</strong>, 
+          y conocimientos en frameworks modernos como <strong>ASP.NET</strong> y <strong>Angular</strong>. 
+          Apasionado por crear soluciones innovadoras y escalables.
+        </p>
+        {/* Botones */}
+        <div className="flex gap-4">
+          <a
+            href="#contact"
+            className="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-700 text-white font-bold rounded-lg shadow-md hover:from-indigo-700 hover:to-blue-600 hover:shadow-lg transition duration-300"
+          >
+            Contáctame
           </a>
-          <a href="https://github.com/mrphaox" className="icon hover:bg-slate-800 rounded-full px-5 py-2">
-            <FaGithub size={24} />
+          <a
+            href="https://github.com/mrphaox"
+            target="_blank"
+            aria-label="Github"
+            className="text-gray-400 hover:text-white transition duration-300"
+          >
+            <FaGithub size={28} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/oscar-alberto-neira-vaca-75b387259/"
+            target="_blank"
+            aria-label="LinkedIn"
+            className="text-blue-500 hover:text-blue-700 transition duration-300"
+          >
+            <FaLinkedin size={28} />
           </a>
         </div>
       </div>
     </div>
   );
 };
+
 export default Banner;

@@ -2,33 +2,28 @@ import React from "react";
 import { SiInformatica } from "react-icons/si";
 import Title from "./Title";
 
-const Aboutme = () => {
+const AboutMe = () => {
   return (
-    <div className="wrapper items-center">
-      <Title text="About Me" icon=<SiInformatica/>/>
-      <div className=" text-lg tracking-wide flex-col gap-6">
-      <p className=" items-center">
-        <br/>
-        Mi objetivo es aplicar mis habilidades y conocimientos en el desarrollo
-        web y en el análisis de datos para crear soluciones innovadoras y
-        eficientes para las necesidades de mis clientes y usuarios.
-
-         Me apasiona aprender sobre nuevas tecnologías y tendencias en el campo de la
-        programación y estoy constantemente buscando oportunidades para mejorar
-        mis habilidades y conocimientos. He trabajado en varios proyectos de
-        fullStack utilizando el framework Next.js y he obtenido habilidades
-        sólidas en el desarrollo de aplicaciones web, creación de bases de
-        datos, pruebas y optimización de rendimiento. Además, he trabajado en
-        proyectos de análisis de datos utilizando lenguajes de programación como
-        Python y SQL, y he obtenido habilidades en la limpieza, transformación y
-        visualización de datos. </p>
-        <br/>
-        Soy un trabajador comprometido y un jugador de equipo colaborativo que busca contribuir al éxito de cualquier proyecto
-        en el que participe. Estoy emocionado de explorar nuevas oportunidades
-        en el campo de la ingeniería de sistemas y el desarrollo web.
+    <div className="wrapper p-6 bg-gradient-to-b from-gray-900 to-gray-800 rounded-lg shadow-lg">
+      <Title text="Sobre Mí" icon={<SiInformatica />} />
+      <div className="text-lg tracking-wide flex flex-col gap-6 text-gray-300">
+        <p className="leading-relaxed">
+          Soy un profesional en <strong>Ingeniería de Sistemas</strong> con experiencia en desarrollo 
+          front-end y back-end. Me especializo en el desarrollo de componentes web, control de versiones 
+          y el uso de tecnologías como <strong>JavaScript</strong>, <strong>React</strong>, y <strong>Next.js</strong>.
+        </p>
+        <p className="leading-relaxed">
+          Mi formación y experiencia me han permitido desarrollar habilidades técnicas sólidas y colaborar 
+          eficazmente en equipos de desarrollo. Estoy comprometido con aprender continuamente y contribuir 
+          al éxito de proyectos tecnológicos innovadores.
+        </p>
+        <p className="leading-relaxed">
+          Además, tengo experiencia en análisis de datos con <strong>Python</strong> y <strong>SQL</strong>, 
+          así como en la implementación de metodologías ágiles como Scrum para la gestión eficiente de proyectos.
+        </p>
       </div>
     </div>
   );
 };
 
-export default Aboutme;
+export default AboutMe;
