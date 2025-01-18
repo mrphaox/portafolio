@@ -7,7 +7,7 @@ import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 export default function Home() {
   return (
-    <main className='w-full bg-gray-950 items-center text-gray-300 px-4'>
+    <main className='w-full bg-sky-950 items-center text-gray-300 px-4'>
       <div className='max-w-screen mx-auto lg:pt-10'>
         <Banner/>
         <Aboutme/>
