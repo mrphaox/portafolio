@@ -29,12 +29,11 @@ const Banner = () => {
         </p>
         {/* Botones */}
         <div className="flex gap-4">
-          <a
-            href="#contact"
-            className="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-700 text-white font-bold rounded-lg shadow-md hover:from-indigo-700 hover:to-blue-600 hover:shadow-lg transition duration-300"
-          >
-            Contáctame
-          </a>
+        <a href="mailto:oneira1323@gmail.com" aria-label="Enviar correo">
+        <button className="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-700 text-white font-bold rounded-lg shadow-md hover:from-indigo-700 hover:to-blue-600 hover:shadow-lg transition duration-300">
+          Contáctame
+        </button>
+      </a>
           <a
             href="https://github.com/mrphaox"
             target="_blank"
