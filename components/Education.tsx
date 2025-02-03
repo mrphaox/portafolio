@@ -1,8 +1,26 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
 import { FaGraduationCap, FaCertificate, FaSchool } from "react-icons/fa";
 import Title from "./Title";
 
 const Education = () => {
+  const cardsRef = useRef<HTMLDivElement[]>([]);
+
+  useEffect(() => {
+    gsap.fromTo(
+      cardsRef.current,
+      { opacity: 0, x: -50 },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1,
+        stagger: 0.3,
+        ease: "power3.out",
+      }
+    );
+  }, []);
+
   const educationData = [
     {
       institution: "Universidad Santo Tomas Seccional Tunja",
@@ -37,13 +55,12 @@ const Education = () => {
         {educationData.map((edu, index) => (
           <div
             key={index}
-            className="flex items-center gap-4 bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+            ref={(el) => (cardsRef.current[index] = el!)}
+            className="flex items-center gap-4 bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-blue-500 transition-shadow duration-300 transform hover:scale-105"
           >
             <div className="text-blue-500 text-3xl">{edu.icon}</div>
             <div>
-              <h3 className="text-xl font-bold text-white">
-                {edu.institution}
-              </h3>
+              <h3 className="text-xl font-bold text-white">{edu.institution}</h3>
               <p className="text-sm text-gray-400">{edu.degree}</p>
               <span className="text-xs text-gray-500">{edu.duration}</span>
               <p className="text-gray-300 mt-2">{edu.description}</p>
